@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="RadioButtons.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Calculadora dos valores" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="Primer valor" Margin="5" FontSize="Large"/>
+        <Entry x:Name="valor1" Margin="5" FontSize="Large" Keyboard="Numeric"/>
+        <Label Text="Segundo valor" Margin="5" FontSize="Large"/>
+        <Entry x:Name="valor2" Margin="5" FontSize="Large" Keyboard="Numeric"/>
+        <input:RadioButtonGroupView Margin="5" x:Name="operacion">
+            <input:RadioButton Text="Suma"/>
+            <input:RadioButton Text="Resta" />
+            <input:RadioButton Text="Multipliación" />
+            <input:RadioButton Text="División" />
+        </input:RadioButtonGroupView>
+        <Button Text="Ejecutar" Margin="5" FontSize="Large" Clicked="Button_Clicked"/>
+        <Label x:Name="resultado" Margin="5" FontSize="Medium" FontAttributes="Bold"/>
+    </StackLayout>
+
+</ContentPage>
